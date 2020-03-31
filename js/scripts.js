@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
   var vowels = ['a','e','i','o','u'];
+  
   $('form').submit(function(event){
     var userString = $("#originalString").val();
     var outputString = [];
@@ -11,8 +12,14 @@ $(document).ready(function(){
       console.log(userString);
     }
     
+    $('#output').text(userString);
+    $('#output').show();
+    $('#input').hide();
+
     event.preventDefault();
   });
+
+  
 
 });
   
