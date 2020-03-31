@@ -5,8 +5,8 @@ $(document).ready(function(){
     var userString = $("#originalString").val();
     
     for (index = 0; index < vowels.length ;index +=1) {
-      userString.replace('a', '-');
-      console.log(userString);
+      var outputString = userString.replace(vowels[index], '-');
+      console.log(outputString);
     }
     userString.replace('a', '-');
     console.log(userString, vowels);
