@@ -1,18 +1,20 @@
 $(document).ready(function(){
 
   var vowels = ['a','e','i','o','u'];
-  
+  var outputString = [];
+
   $('form').submit(function(event){
     var userString = $("#originalString").val();
-    var outputString = [];
-    
 
-    for (index = 0; index < vowels.length ;index +=1) {
-      userString = userString.replace(vowels[index], '-');
-      console.log(userString);
+    for (index2 = 0; index2 < userString.length; index2+=1){
+      for (index1 = 0; index1 < vowels.length ;index1 +=1) {
+        userString = userString.replace(vowels[index1], '-');
+      }
     }
     
-    $('#output').text(userString);
+    outputString=userString
+
+    $('#output').text(outputString);
     $('#output').show();
     $('#input').hide();
 
